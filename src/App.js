@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "animate.css";
+import { RouterProvider } from "react-router-dom";
+import router from './routes/Routes.js'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { HelmetProvider } from "react-helmet-async";
+import { QueryClient, QueryClientProvider } from "react-query";
+import AuthProvider from "./providers/AuthProvider.js";
+import "react-pagination-bar/dist/index.css";
+// import "@moxy/react-animate-text/dist/index.css";
+// import "pace-js";
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <AuthProvider>
+          <RouterProvider router={router} />
+        </AuthProvider>
+      </HelmetProvider>
+    </QueryClientProvider>
   );
 }
 
