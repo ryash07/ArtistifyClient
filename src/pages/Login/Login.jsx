@@ -6,7 +6,7 @@ import { FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import useAuthContext from "../../hooks/useAuthContext";
 import toast from "react-hot-toast";
 import { useLocation } from "react-router-dom";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 import CustomHelmet from "../../components/CustomHelmet/CustomHelmet";
 
 const Login = () => {
@@ -69,7 +69,7 @@ const Login = () => {
   return (
     <div
       className="container mt-20 mb-24 px-6 md:px-0"
-      style={{ fontFamily: "var(--poppins)" }}
+      style={{ fontFamily: "var(--poppins)" , width: '50%'}}
     >
       <CustomHelmet title={"Login"} />
 
@@ -77,9 +77,9 @@ const Login = () => {
         className="text-6xl font-bold tracking-wide mb-10"
         style={{ fontFamily: "var(--italiana)" }}
       >
-        <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
+        {/* <AnimateText initialDelay={0.2} wordDelay={0.2} separator=""> */}
           Login
-        </AnimateText>
+        {/* </AnimateText> */}
       </h1>
 
       {/* error notification */}
@@ -166,9 +166,10 @@ const Login = () => {
         </div>
       </form>
 
-      <div className="flex justify-start items-center mt-7">
-        <p className="w-[40%] md:w-[15%] font-medium">Or, continue with</p>
-        <div className="w-[60%] md:w-full bg-gray-400 h-[1px]"></div>
+      <div className="flex justify-start items-center mt-10">
+        {/* <div className="w-[60%] md:w-full bg-gray-400 h-[1px]"></div> */}
+        <p >Or, continue with</p>
+        {/* <div className="w-[60%] md:w-full bg-gray-400 h-[1px]"></div> */}
       </div>
 
       <div className="flex items-center gap-6 mt-5">

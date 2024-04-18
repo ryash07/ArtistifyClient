@@ -20,11 +20,11 @@ import { TfiClose } from "react-icons/tfi";
 import Textra from "react-textra";
 import { HashLink } from "react-router-hash-link";
 import { Link, useLocation } from "react-router-dom";
-// import RightSideDrawer from "../../components/RightSideDrawer/RightSideDrawer";
+import RightSideDrawer from "../../components/RightSideDrawer/RightSideDrawer";
 import useAuthContext from "../../hooks/useAuthContext";
 // import placeholderUserImg from "../../assets/placeholder-user.png";
 import toast from "react-hot-toast";
-// import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCard from "../../components/ProductCard/ProductCard";
 import Slider from "react-slick";
 import useSearchedProducts from "../../hooks/useSearchedProducts";
 import axios from "axios";
@@ -183,7 +183,7 @@ const Header = () => {
               <div className="flex items-center gap-3 font-semibold">
                 <FiPhone className="text-lg" />
                 <a href="tel:+8801306734299" className="text-sm">
-                  (+880) 13067-34299
+                  (+91) 98989-28833
                 </a>
               </div>
               <Textra
@@ -305,13 +305,13 @@ const Header = () => {
                           <div>
                             <div className="hidden md:block">
                               <Slider {...settings}>
-                                {/* {searchedProducts?.map((product) => (
+                                {searchedProducts?.map((product) => (
                                   <ProductCard
                                     key={product._id}
                                     cardData={product}
                                     flashSale={true}
                                   />
-                                ))} */}
+                                ))}
                               </Slider>
                             </div>
                             <div className="px-8 space-y-5 md:hidden">
@@ -853,7 +853,7 @@ const Header = () => {
                 <TfiClose />
               </button>
             </div>
-            {/* <RightSideDrawer setShowRightDrawer={setShowRightDrawer} /> */}
+            <RightSideDrawer setShowRightDrawer={setShowRightDrawer} />
           </div>
           <div
             className={`h-screen fixed top-0 left-0 right-0 bg-[rgba(0,0,0,.6)] z-[1004] ${

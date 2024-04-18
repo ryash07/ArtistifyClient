@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Featured.css";
 import useProducts from "../../../hooks/useProducts";
-import featuredBanner from "../../../assets/featuredBanner.jpg";
+// import featuredBanner from "../../../assets/featuredBanner.jpg";
 import FeaturedCard from "./FeaturedCard/FeaturedCard";
 import { Link } from "react-router-dom";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
+
 
 const Featured = () => {
   const [products, isProductsLoading] = useProducts();
@@ -36,7 +37,7 @@ const Featured = () => {
     <div className="container grid grid-cols-1 md:grid-cols-2 md:gap-x-6 gap-y-8 md:gap-y-0 mb-24">
       <div className="h-[450px] relative" data-aos="fade-up">
         <img
-          src={featuredBanner}
+          src=""
           className="border w-full h-full hover:scale-[1.01] transition-all duration-150 ease"
         />
         <div
@@ -48,9 +49,10 @@ const Featured = () => {
             className="text-4xl font-bold text-black mt-2 mb-6"
             style={{ fontFamily: "var(--italiana)" }}
           >
-            <AnimateText initialDelay={0.2} wordDelay={0.2}>
+            {/* <AnimateText initialDelay={0.2} wordDelay={0.2}>
               Wedding Rings
-            </AnimateText>
+            </AnimateText> */}
+            Wedding Rings
           </h4>
 
           <Link to="/shop" state={{ category: "diamond rings" }}>

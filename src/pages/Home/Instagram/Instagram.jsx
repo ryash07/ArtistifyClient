@@ -6,7 +6,7 @@ import insta3 from "../../../assets/instagram/instagram3-2-194x300.png";
 import insta4 from "../../../assets/instagram/instagram4-2.png";
 import insta5 from "../../../assets/instagram/instagram5-2.png";
 import { FaInstagram } from "react-icons/fa6";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 
 const Instagram = () => {
   const instaImgs = [insta1, insta2, insta3, insta4, insta5];
@@ -17,9 +17,10 @@ const Instagram = () => {
           style={{ fontFamily: "var(--italiana)" }}
           className="text-xl md:text-4xl text-black font-bold tracking-wider w-[50%]"
         >
-          <AnimateText initialDelay={0.2} wordDelay={0.2}>
+          {/* <AnimateText initialDelay={0.2} wordDelay={0.2}>
             Follow Us On Instagram
-          </AnimateText>
+          </AnimateText> */}
+          Follow Us On Instagram
         </h3>
         <a
           href="https://instagram.com"

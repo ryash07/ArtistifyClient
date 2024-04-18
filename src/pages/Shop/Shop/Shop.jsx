@@ -43,6 +43,7 @@ const Shop = () => {
       right: 0,
       behavior: "smooth",
     });
+    // eslint-disable-next-line
   }, [currentPage]);
 
   // find max and min prices of the products
@@ -135,6 +136,7 @@ const Shop = () => {
 
       setAllFilteredCategories(resultArray);
     }
+    // eslint-disable-next-line
   }, [allCategories]);
 
   const handleLinkClicked = () => {

@@ -46,7 +46,7 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <div className="mt-4 flex items-start gap-4 text-gray-600">
             <IoHomeOutline className="text-lg" />
-            <p>California, United States</p>
+            <p>Rajasthan, India</p>
           </div>
           <div className="mt-2 flex items-start gap-4 text-gray-600">
             <IoMailOutline className="text-lg" />
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
           <div className="mt-2 flex items-start gap-4 text-gray-600">
             <IoCallOutline className="text-lg" />
-            <p>+8801306-734299</p>
+            <p>+918882229999</p>
           </div>
         </div>
 

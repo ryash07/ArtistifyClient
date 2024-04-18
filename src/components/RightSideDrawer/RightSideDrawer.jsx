@@ -74,6 +74,7 @@ const RightSideDrawer = ({ setShowRightDrawer }) => {
         setSubTotal(res.data.subtotal);
       });
     }
+    // eslint-disable-next-line
   }, [cartData, user, isAuthLoading]);
 
   return (

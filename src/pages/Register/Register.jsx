@@ -8,7 +8,7 @@ import useAuthContext from "../../hooks/useAuthContext";
 import toast from "react-hot-toast";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 import Swal from "sweetalert2";
 import CustomHelmet from "../../components/CustomHelmet/CustomHelmet";
 
@@ -213,9 +213,10 @@ const Register = () => {
         className="text-6xl font-bold tracking-wide mb-10"
         style={{ fontFamily: "var(--italiana)" }}
       >
-        <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
+        {/* <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
           Register
-        </AnimateText>
+        </AnimateText> */}
+        Register
       </h1>
 
       {/* error notification */}
