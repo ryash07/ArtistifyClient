@@ -13,7 +13,7 @@ import RadarChartComponent from "../../../components/RadarChartComponent/RadarCh
 import BarChartComponent from "../../../components/BarChartComponent/BarChartComponent";
 import StarRatings from "react-star-ratings";
 import useAdminStats from "../../../hooks/useAdminStats";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 
 const AdminDashboard = () => {
   const {
@@ -37,9 +37,10 @@ const AdminDashboard = () => {
           className="text-3xl font-semibold"
           style={{ fontFamily: "var(--italiana)" }}
         >
-          <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
+          {/* <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
             Dashboard
-          </AnimateText>
+          </AnimateText> */}
+          Dashboard
         </h1>
         <p className="text-sm text-gray-500">Welcome to your dashboard</p>
       </div>

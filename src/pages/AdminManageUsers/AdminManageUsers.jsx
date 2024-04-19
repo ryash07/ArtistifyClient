@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import useAuthContext from "../../hooks/useAuthContext";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 
 const AdminManageUsers = () => {
   const [userFromDB, , , totalSpentArray] = useUserInfo();
@@ -99,9 +99,9 @@ const AdminManageUsers = () => {
           className="mt-1 font-extrabold text-4xl tracking-wider"
           style={{ fontFamily: "var(--italiana)" }}
         >
-          <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
+          {/* <AnimateText initialDelay={0.2} wordDelay={0.2} separator=""> */}
             Users
-          </AnimateText>
+          {/* </AnimateText> */}
         </h2>
       </div>
 

@@ -29,10 +29,10 @@ const Home = () => {
       <MarqueeSection />
       <Categories />
       <FlashSale />
-      <div id="products">
+      {/* <div id="products">
         <NewProducts />
         <Featured />
-      </div>
+      </div> */}
       <Reviews />
       <Instagram />
       <OtherFeatures />

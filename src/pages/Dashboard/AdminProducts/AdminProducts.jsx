@@ -6,7 +6,7 @@ import { Pagination } from "react-pagination-bar";
 import useSearchedProducts from "../../../hooks/useSearchedProducts";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 
 const AdminProducts = () => {
   const [products, isProductsLoading, refetch] = useProducts();
@@ -77,9 +77,9 @@ const AdminProducts = () => {
           className="mt-1 font-bold text-3xl"
           style={{ fontFamily: "var(--italiana)" }}
         >
-          <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
+          {/* <AnimateText initialDelay={0.2} wordDelay={0.2} separator=""> */}
             Products
-          </AnimateText>
+          {/* </AnimateText> */}
         </h2>
       </div>
 

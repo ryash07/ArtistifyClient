@@ -45,9 +45,9 @@ const DashboardLayout = () => {
                   className="text-4xl font-bold text-black tracking-wide"
                   style={{ fontFamily: "var(--italiana)" }}
                 >
-                  <AnimateText initialDelay={0.2} wordDelay={0.2}>
+                  {/* <AnimateText initialDelay={0.2} wordDelay={0.2}> */}
                     {`Welcome, ${userFromDB?.name}`}
-                  </AnimateText>
+                  {/* </AnimateText> */}
                 </h1>
 
                 <div className="flex flex-col md:flex-row items-start mt-16">

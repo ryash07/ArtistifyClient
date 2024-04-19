@@ -6,7 +6,7 @@ import { CgCloseO } from "react-icons/cg";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 
 const AdminCategories = () => {
   const { user, isAuthLoading } = useAuthContext();
@@ -138,9 +138,9 @@ const AdminCategories = () => {
         className="mt-1 font-bold text-3xl"
         style={{ fontFamily: "var(--italiana)" }}
       >
-        <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
+        {/* <AnimateText initialDelay={0.2} wordDelay={0.2} separator=""> */}
           Categories
-        </AnimateText>
+        {/* </AnimateText> */}
       </h2>
 
       <div className="flex flex-col-reverse md:flex-row justify-between items-start gap-x-8 mt-10 px-4 md:px-0">

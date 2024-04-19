@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "/logo.png";
+// import logo from "/logo.png";
 import "./AdminNavigation.css";
 import {
   FaAngleRight,
@@ -41,7 +41,7 @@ const AdminNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
           <div className="flex justify-between items-center gap-x-3 w-[50%] md:w-[19.8%] border">
             <div className="flex-grow flex flex-col md:flex-row items-center justify-around bg-[var(--pink-gold)] px-2 py-7 h-16">
               <Link to={"/"} className="block w-[90%] md:w-[65%]">
-                <img src={logo} alt="logo" className="w-full" />
+                {/* <img src={logo} alt="logo" className="w-full" /> */}
               </Link>
             </div>
           </div>

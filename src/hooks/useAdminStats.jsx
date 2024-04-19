@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import useAuthContext from "./useAuthContext";
 import useAxiosSecure from "./useAxiosSecure";
@@ -38,6 +38,7 @@ const useAdminStats = () => {
         setIncomeStats(res.data);
       });
     }
+    // eslint-disable-next-line
   }, [user]);
 
   // BEST SELLING POPULAR PRODUCTS
@@ -47,6 +48,7 @@ const useAdminStats = () => {
         .get("/admin-dashboard/popular-products")
         .then((res) => setPopularProducts(res.data));
     }
+    // eslint-disable-next-line
   }, [user]);
 
   // Recent Reviews
@@ -56,6 +58,7 @@ const useAdminStats = () => {
         .get("/admin-dashboard/recent-reviews")
         .then((res) => setRecentReviews(res.data));
     }
+    // eslint-disable-next-line
   }, [user]);
 
   return {

@@ -9,7 +9,7 @@ import LineChartComponent from "../../../components/LineChartComponent/LineChart
 import useAdminStats from "../../../hooks/useAdminStats";
 import useAuthContext from "../../../hooks/useAuthContext";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import AnimateText from "@moxy/react-animate-text";
+// import AnimateText from "@moxy/react-animate-text";
 
 const AdminOrders = () => {
   const location = useLocation();
@@ -70,9 +70,9 @@ const AdminOrders = () => {
           className="mt-1 font-bold text-3xl"
           style={{ fontFamily: "var(--italiana)" }}
         >
-          <AnimateText initialDelay={0.2} wordDelay={0.2} separator="">
+          {/* <AnimateText initialDelay={0.2} wordDelay={0.2} separator=""> */}
             Orders
-          </AnimateText>
+          {/* </AnimateText> */}
         </h2>
       </div>
 
