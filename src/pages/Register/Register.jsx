@@ -112,7 +112,7 @@ const Register = () => {
       // upload image to cloudinary
       axios
         .post(
-          "https://ub-jewellers-server-production.up.railway.app/cloudinary-upload",
+          "http://localhost:5000/cloudinary-upload",
           {
             name: data?.name,
             img: base64Image,
@@ -140,7 +140,7 @@ const Register = () => {
                   .then(() => {
                     // add user to users collection in db
                     axios.post(
-                      "https://ub-jewellers-server-production.up.railway.app/users",
+                      "http://localhost:5000/users",
                       {
                         name: result?.user?.displayName,
                         email: result?.user?.email,
@@ -181,7 +181,7 @@ const Register = () => {
       .then((res) => {
         // add user to users collection in db
         axios.post(
-          "https://ub-jewellers-server-production.up.railway.app/users",
+          "http://localhost:5000/users",
           {
             name: res?.user?.displayName,
             email: res?.user?.email,

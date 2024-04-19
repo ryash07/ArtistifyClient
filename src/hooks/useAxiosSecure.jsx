@@ -9,14 +9,14 @@ const useAxiosSecure = () => {
 
   // Create an interceptor instance of Axios with a base URL
   const axiosSecure = axios.create({
-    baseURL: "https://ub-jewellers-server-production.up.railway.app",
+    baseURL: "http://localhost:5000/",
   });
 
   // Add an interceptor to inject the authorization header
   axiosSecure.interceptors.request.use(
     (config) => {
       // Get the access token from localStorage
-      const accessToken = localStorage.getItem("ub-jewellers-jwt-token");
+      const accessToken = localStorage.getItem("artistify-jwt-token");
 
       // If an access token exists, add it to the request headers
       if (accessToken) {

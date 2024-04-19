@@ -54,7 +54,7 @@ const Header = () => {
     // fetching notifications
     axios
       .get(
-        "https://ub-jewellers-server-production.up.railway.app/nav-notifications"
+        "http://localhost:5000/nav-notifications"
       )
       .then((res) => setNavNotifications(res.data))
       .catch((error) => console.error(error));
