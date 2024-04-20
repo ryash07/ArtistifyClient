@@ -9,7 +9,7 @@ const useSearchedProducts = (searchText) => {
     setIsSearchLoading(true);
     axios
       .get(
-        `https://ub-jewellers-server-production.up.railway.app/products?searchText=${searchText}`
+        `http://localhost:5000/products?searchText=${searchText}`
       )
       .then((res) => {
         setSearchedProducts(res.data);

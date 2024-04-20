@@ -63,7 +63,7 @@ const Shop = () => {
 
     axios
       .get(
-        `https://ub-jewellers-server-production.up.railway.app/products/filter?category=${category}&minPrice=${minimumPrice}&maxPrice=${maximumPrice}&priceOrder=${priceSortingOrder}&size=${size}&carate=${carate}&search=${searchText}`
+        `http://localhost:5000/productsfilter?category=${category}&minPrice=${minimumPrice}&maxPrice=${maximumPrice}&priceOrder=${priceSortingOrder}&size=${size}&carate=${carate}&search=${searchText}`
       )
       .then((res) => {
         setFilteredProducts(res.data);
@@ -111,7 +111,7 @@ const Shop = () => {
   useEffect(() => {
     // fetch all categories
     axios
-      .get("https://ub-jewellers-server-production.up.railway.app/categories")
+      .get("https://localhost:5000/categories")
       .then((res) => {
         setAllCategories(res.data);
       })
@@ -335,7 +335,7 @@ const Shop = () => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h3>Carate</h3>
             <div className="space-y-2 mt-5">
               {filterCarates?.map((carate) => (
@@ -355,7 +355,7 @@ const Shop = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
         {/* right side - products */}
         <div className="shop-lg-right-side">

@@ -1,10 +1,10 @@
 import React from "react";
 import "./Instagram.css";
-import insta1 from "../../../assets/instagram/instagram1-1.png";
-import insta2 from "../../../assets/instagram/instagram2-1.png";
-import insta3 from "../../../assets/instagram/instagram3-2-194x300.png";
-import insta4 from "../../../assets/instagram/instagram4-2.png";
-import insta5 from "../../../assets/instagram/instagram5-2.png";
+import insta1 from "../../../assets/instagram/instagram1.jpg";
+import insta2 from "../../../assets/instagram/instagram2.jpg";
+import insta3 from "../../../assets/instagram/instagram3.jpg";
+import insta4 from "../../../assets/instagram/instagram4.webp";
+import insta5 from "../../../assets/instagram/instagram5.jpg";
 import { FaInstagram } from "react-icons/fa6";
 // import AnimateText from "@moxy/react-animate-text";
 

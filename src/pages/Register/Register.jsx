@@ -206,7 +206,7 @@ const Register = () => {
   return (
     <div
       className="container mt-20 mb-24 px-6 md:px-0"
-      style={{ fontFamily: "var(--poppins)" }}
+      style={{ fontFamily: "var(--poppins)", width: '70%' }}
     >
       <CustomHelmet title="Register" />
       <h1

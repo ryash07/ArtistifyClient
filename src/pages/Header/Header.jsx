@@ -195,35 +195,35 @@ const Header = () => {
             </div>
             <div className="w-[25%] flex justify-end items-center gap-3 upper-nav-right">
               <a
-                href="https://www.facebook.com/uzzal.bhowmik01"
+                href="#fb"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaFacebookF className="text-xl" />
               </a>
               <a
-                href="https://youtu.be/xuuNZQwhEn4?si=iqIPgbobYcA7EhOD"
+                href="#youtube"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaYoutube className="text-xl" />
               </a>
               <a
-                href="https://www.instagram.com/reel/C1UC-rjMkAE/"
+                href="#instagram"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaInstagram className="text-xl" />
               </a>
               <a
-                href="https://www.linkedin.com/in/uzzal-bhowmik-76973319a/"
+                href="#linkedin"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaLinkedin className="text-xl" />
               </a>
               <a
-                href="https://www.pinterest.com/pin/pick-your-fave-video--745134700851924406/"
+                href="#pinterest"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -427,13 +427,13 @@ const Header = () => {
                             Hot
                           </div>
                         </div>
-                        <HashLink
+                        {/* <HashLink
                           to="/#products"
                           smooth
                           scroll={(el) => scrollWithOffset(el)}
                         >
                           Products
-                        </HashLink>
+                        </HashLink> */}
                         <Link to="/shop">Shop</Link>
 
                         <HashLink
