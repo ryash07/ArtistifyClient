@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Featured.css";
 import useProducts from "../../../hooks/useProducts";
-// import featuredBanner from "../../../assets/featuredBanner.jpg";
+import featuredBanner from "../../../assets/bannerFeatured.jpg";
 import FeaturedCard from "./FeaturedCard/FeaturedCard";
 import { Link } from "react-router-dom";
 // import AnimateText from "@moxy/react-animate-text";
@@ -37,7 +37,7 @@ const Featured = () => {
     <div className="container grid grid-cols-1 md:grid-cols-2 md:gap-x-6 gap-y-8 md:gap-y-0 mb-24">
       <div className="h-[450px] relative" data-aos="fade-up">
         <img
-          src=""
+          src={featuredBanner}
           className="border w-full h-full hover:scale-[1.01] transition-all duration-150 ease"
         />
         <div

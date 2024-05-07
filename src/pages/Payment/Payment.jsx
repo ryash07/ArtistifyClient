@@ -5,7 +5,8 @@ import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import useCart from "../../hooks/useCart";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 
-// const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+console.log(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
 
 const Payment = () => {
   const [clientSecret, setClientSecret] = useState("");
@@ -32,9 +33,9 @@ const Payment = () => {
   return (
     <div className="ml-5 mt-5">
       {clientSecret && (
-        // <Elements options={options} stripe={stripePromise}>
+        <Elements options={options} stripe={stripePromise}>
           <CheckoutForm />
-        // </Elements>
+        </Elements>
       )}
     </div>
   );

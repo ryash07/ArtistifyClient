@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../pages/Header/Header";
 import Footer from "../pages/Footer/Footer";
-// import { Toaster } from "react-hot-toast";
-// import TakeToLoginModal from "../components/TakeToLoginModal/TakeToLoginModal";
+import { Toaster } from "react-hot-toast";
+import TakeToLoginModal from "../components/TakeToLoginModal/TakeToLoginModal";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 
@@ -36,7 +36,7 @@ const MainLayout = () => {
       <Header />
       <Outlet />
       <Footer />
-      {/* <Toaster 
+      <Toaster 
         position="top-center"
         toastOptions={{
           className: "font-bold py-8",
@@ -47,7 +47,7 @@ const MainLayout = () => {
           },
         }}
       />
-      <TakeToLoginModal /> */}
+      <TakeToLoginModal />
     </div>
   );
 };
