@@ -52,7 +52,7 @@ const Featured = () => {
             {/* <AnimateText initialDelay={0.2} wordDelay={0.2}>
               Wedding Rings
             </AnimateText> */}
-            Wedding Rings
+            Featured Products
           </h4>
 
           <Link to="/shop" state={{ category: "diamond rings" }}>

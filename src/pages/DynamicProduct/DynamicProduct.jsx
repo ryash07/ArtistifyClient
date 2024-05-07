@@ -80,13 +80,13 @@ const DynamicProduct = () => {
         <div className="w-full md:w-[40%] relative product-img-con border-2 rounded-xl h-[500px]">
           <div className="h-[100%] flex justify-center items-center">
             {/* product image magnifier */}
-            <Magnifier
+            {/* <Magnifier
               src={dynamicProduct?.img}
               mgShape="circle"
               mgShowOverflow={false}
               mgBorderWidth={1}
               zoomFactor={1.2}
-            />
+            /> */}
           </div>
           <div className="img-zoom-hint opacity-100 visible flex items-center gap-2 bg-gray-50 w-fit px-4 py-3 rounded-full shadow absolute bottom-5 right-5 text-gray-500">
             <FaMagnifyingGlass />

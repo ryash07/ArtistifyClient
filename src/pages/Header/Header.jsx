@@ -443,12 +443,19 @@ const Header = () => {
                         >
                           Reviews
                         </HashLink>
-                        <HashLink
+                        {/* <HashLink
                           to="/#connect"
                           smooth
                           scroll={(el) => scrollWithOffset(el)}
                         >
                           Connect Us
+                        </HashLink> */}
+                        <HashLink
+                          to="/#sell"
+                          smooth
+                          scroll={(el) => scrollWithOffset(el)}
+                        >
+                          Become a supplier
                         </HashLink>
                       </ul>
                     </div>
@@ -608,17 +615,22 @@ const Header = () => {
                             Hot
                           </div>
                         </div>
-                        <HashLink to="/#products" smooth>
+                        {/* <HashLink to="/#products" smooth>
                           Products
-                        </HashLink>
+                        </HashLink> */}
                         <Link to="/shop">Shop</Link>
 
                         <HashLink to="/#reviews" smooth>
                           Reviews
                         </HashLink>
-                        <HashLink to="/#connect" smooth>
+                        {/* <HashLink to="/#connect" smooth>
                           Connect Us
+                        </HashLink> */}
+
+                        <HashLink to="/#reviews" smooth>
+                          Become a supplier
                         </HashLink>
+
                       </ul>
                     </div>
 

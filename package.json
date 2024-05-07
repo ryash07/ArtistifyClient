@@ -33,7 +33,8 @@
     "recharts": "^2.10.4",
     "country-state-city": "^3.2.1",
     "react-select": "^5.8.0",
-    "firebase": "^10.7.1"
+    "firebase": "^10.7.1",
+    "easyinvoice": "^3.0.22"
   },
   "scripts": {
     "start": "react-scripts start",

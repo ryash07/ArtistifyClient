@@ -5,9 +5,9 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-// import ProductPageLayout from "../layouts/ProductPageLayout";
-// import ProductDescription from "../pages/DynamicProduct/ProductDescription/ProductDescription";
-// import ProductReviews from "../pages/DynamicProduct/ProductReviews/ProductReviews";
+import ProductPageLayout from "../layouts/ProductPageLayout";
+import ProductDescription from "../pages/DynamicProduct/ProductDescription/ProductDescription";
+import ProductReviews from "../pages/DynamicProduct/ProductReviews/ProductReviews";
 import Shop from "../pages/Shop/Shop/Shop";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
@@ -15,8 +15,8 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import MyDashboard from "../pages/Dashboard/MyDashboard/MyDashboard";
 import MyOrders from "../pages/Dashboard/MyOrders/MyOrders";
 import AddressBook from "../pages/Dashboard/AddressBook/AddressBook";
-// import Checkout from "../pages/Checkout/Checkout";
-// import OrderSuccess from "../pages/OrderSuccess/OrderSuccess";
+import Checkout from "../pages/Checkout/Checkout";
+import OrderSuccess from "../pages/OrderSuccess/OrderSuccess";
 import AddReview from "../pages/Dashboard/AddReview/AddReview";
 import AdminDashboard from "../pages/Dashboard/AdminDashboard/AdminDashboard";
 import AdminRoute from "./AdminRoute/AdminRoute";
@@ -56,22 +56,22 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: "checkout",
-      //   element: (
-      //     <PrivateRoute>
-      //       <Checkout />
-      //     </PrivateRoute>
-      //   ),
-      // },
-      // {
-      //   path: "order-success",
-      //   element: (
-      //     <PrivateRoute>
-      //       <OrderSuccess />
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: "checkout",
+        element: (
+          <PrivateRoute>
+            <Checkout />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "order-success",
+        element: (
+          <PrivateRoute>
+            <OrderSuccess />
+          </PrivateRoute>
+        ),
+      },
       // {
         // path: "dashboard",
         // element: (
@@ -148,20 +148,20 @@ const router = createBrowserRouter([
         // ],
       // },
 
-      // {
-      //   path: "products/:id",
-      //   element: <ProductPageLayout />,
-      //   children: [
-      //     {
-      //       path: "description",
-      //       element: <ProductDescription />,
-      //     },
-      //     {
-      //       path: "reviews",
-      //       element: <ProductReviews />,
-      //     },
-      //   ],
-      // },
+      {
+        path: "products/:id",
+        element: <ProductPageLayout />,
+        children: [
+          {
+            path: "description",
+            element: <ProductDescription />,
+          },
+          {
+            path: "reviews",
+            element: <ProductReviews />,
+          },
+        ],
+      },
     ],
   },
 ]);

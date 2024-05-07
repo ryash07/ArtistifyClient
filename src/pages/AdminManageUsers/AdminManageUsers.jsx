@@ -15,6 +15,8 @@ const AdminManageUsers = () => {
   const { user, isAuthLoading } = useAuthContext();
   const [axiosSecure] = useAxiosSecure();
 
+  // console.log(userFromDB?.admin)
+
   // fetch all users data
   const {
     data: allUsers,
