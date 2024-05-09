@@ -72,14 +72,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-        // path: "dashboard",
-        // element: (
-          // <PrivateRoute>
-            // <DashboardLayout />
-          // </PrivateRoute>
-        // ),
-        // children: [
+      {
+        path: "dashboard",
+        element: (
+          <PrivateRoute>
+            <DashboardLayout />
+          </PrivateRoute>
+        ),
+        children: [
           {
             path: "myDashboard",
             element: <MyDashboard />,
@@ -99,54 +99,54 @@ const router = createBrowserRouter([
           {
             path: "adminDashboard",
             element: (
-              // <AdminRoute>
+              <AdminRoute>
                 <AdminDashboard />
-              // </AdminRoute>
+              </AdminRoute>
             ),
           },
           {
             path: "adminCategories",
             element: (
-              // <AdminRoute>
+              <AdminRoute>
                 <AdminCategories />
-              // </AdminRoute>
+              </AdminRoute>
             ),
           },
           {
             path: "adminProducts",
             element: (
-              // <AdminRoute>
+              <AdminRoute>
                 <AdminProducts />
-              // </AdminRoute>
+              </AdminRoute>
             ),
           },
 
           {
             path: "adminAddProducts",
             element: (
-              // <AdminRoute>
+              <AdminRoute>
                 <AdminAddProduct />
-              // </AdminRoute>
+              </AdminRoute>
             ),
           },
           {
             path: "adminUsers",
             element: (
-              // <AdminRoute>
+              <AdminRoute>
                 <AdminManageUsers />
-              // </AdminRoute>
+              </AdminRoute>
             ),
           },
           {
             path: "adminOrders",
             element: (
-              // <AdminRoute>
+              <AdminRoute>
                 <AdminOrders />
-              // </AdminRoute>
+              </AdminRoute>
             ),
           },
-        // ],
-      // },
+        ],
+      },
 
       {
         path: "products/:id",

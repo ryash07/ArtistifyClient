@@ -15,8 +15,6 @@ const AdminManageUsers = () => {
   const { user, isAuthLoading } = useAuthContext();
   const [axiosSecure] = useAxiosSecure();
 
-  // console.log(userFromDB?.admin)
-
   // fetch all users data
   const {
     data: allUsers,
@@ -24,13 +22,18 @@ const AdminManageUsers = () => {
     refetch,
   } = useQuery({
     enabled:
-      !isAuthLoading && user?.uid !== undefined && userFromDB?.admin === true,
+      !isAuthLoading && user?.uid !== undefined && userFromDB?.admin === 'true',
     queryKey: ["all-users"],
     queryFn: async () => {
       const res = await axiosSecure.get("/admin/users");
       return res.data;
     },
   });
+
+  console.log({ isAuthLoading, userId: user?.uid, isAdmin: userFromDB?.admin  });
+  // console.log(user?.uid)
+  // console.log(userFromDB?.admin )
+
 
   // Handle Make Admin User
   const handleMakeAdmin = (email) => {
