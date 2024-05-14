@@ -30,11 +30,6 @@ const AdminManageUsers = () => {
     },
   });
 
-  console.log({ isAuthLoading, userId: user?.uid, isAdmin: userFromDB?.admin  });
-  // console.log(user?.uid)
-  // console.log(userFromDB?.admin )
-
-
   // Handle Make Admin User
   const handleMakeAdmin = (email) => {
     axiosSecure

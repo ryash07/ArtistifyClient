@@ -21,7 +21,7 @@ const DashboardLayout = () => {
       <>
         {!isAuthLoading && user?.uid !== undefined && (
           <>
-            {!isUserLoading && userFromDB?.admin ? (
+            {(!isUserLoading && userFromDB?.admin) || (!isUserLoading && userFromDB?.seller) ? (
               <div>
                 <AdminNavigation
                   sidebarCollapsed={sidebarCollapsed}

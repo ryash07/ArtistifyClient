@@ -5,6 +5,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Contact from "../pages/Contact/Contact";
 import ProductPageLayout from "../layouts/ProductPageLayout";
 import ProductDescription from "../pages/DynamicProduct/ProductDescription/ProductDescription";
 import ProductReviews from "../pages/DynamicProduct/ProductReviews/ProductReviews";
@@ -20,11 +21,15 @@ import OrderSuccess from "../pages/OrderSuccess/OrderSuccess";
 import AddReview from "../pages/Dashboard/AddReview/AddReview";
 import AdminDashboard from "../pages/Dashboard/AdminDashboard/AdminDashboard";
 import AdminRoute from "./AdminRoute/AdminRoute";
+import SellerRoute from "./SellerRoute/SellerRoute";
 import AdminProducts from "../pages/Dashboard/AdminProducts/AdminProducts";
 import AdminAddProduct from "../pages/Dashboard/AdminAddProduct/AdminAddProduct";
 import AdminManageUsers from "../pages/AdminManageUsers/AdminManageUsers";
 import AdminCategories from "../pages/AdminCategories/AdminCategories";
 import AdminOrders from "../pages/Dashboard/AdminOrders/AdminOrders";
+import SellerLogin from "../pages/SellerLogin/Login";
+import SellerDashboard from "../pages/SellerDashBoard/SellerDashboard/SellerDashboard";
+
 
 const router = createBrowserRouter([
   {
@@ -47,6 +52,14 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "sellerLogin",
+        element: <SellerLogin />
       },
       {
         path: "wishlist",
@@ -139,6 +152,38 @@ const router = createBrowserRouter([
           },
           {
             path: "adminOrders",
+            element: (
+              <AdminRoute>
+                <AdminOrders />
+              </AdminRoute>
+            ),
+          },
+          {
+            path: "sellerDashboard",
+            element: (
+              <SellerRoute>
+                <SellerDashboard />
+              </SellerRoute>
+            ),
+          },
+          {
+            path: "sellerCategories",
+            element: (
+              <SellerRoute>
+                <AdminCategories />
+              </SellerRoute>
+            ),
+          },
+          {
+            path: "sellerProducts",
+            element: (
+              <SellerRoute>
+                <AdminProducts />
+              </SellerRoute>
+            ),
+          },
+          {
+            path: "sellerOrders",
             element: (
               <AdminRoute>
                 <AdminOrders />

@@ -172,6 +172,19 @@ const ProductCard = ({ cardData, flashSale, counter }) => {
               <FaPen className="text-xl text-gray-600" />
             </Link>
           )}
+
+          {userFromDB?.seller && (
+            <Link
+              to={{
+                pathname: `/dashboard/sellerAddProducts`,
+              }}
+              className="edit-icon-con tooltip tooltip-left block"
+              data-tip="Edit Product"
+              state={{ from: "/", id: _id }}
+            >
+              <FaPen className="text-xl text-gray-600" />
+            </Link>
+          )}
         </div>
 
         <button

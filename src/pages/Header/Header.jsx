@@ -42,6 +42,7 @@ const Header = () => {
   const { cartData } = useCart();
   const [userFromDB, isUserLoading] = useUserInfo();
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isSeller, setIsSeller] = useState(false);
   const [isAdminRoute, setIsAdminRoute] = useState(false);
 
   // fetch or update upper nav notifications
@@ -142,12 +143,23 @@ const Header = () => {
       setIsAdmin(false);
     }
 
+    if (userFromDB?.seller) {
+      setIsSeller(true);
+      // setIsAdminRoute(true);
+    } else {
+      setIsSeller(false);
+      // setIsAdminRoute(false);
+    }
+
     if (userFromDB?.admin && location?.pathname?.includes("admin")) {
       setIsAdminRoute(true);
     } else {
       setIsAdminRoute(false);
     }
   }, [userFromDB, location]);
+
+  // console.log("isSeller:", isSeller);
+  // console.log("isUserLoading:", !isUserLoading);
 
   // admin routes links
   const adminRoutes = (
@@ -166,6 +178,24 @@ const Header = () => {
       </li>
       <li>
         <Link to="/dashboard/adminUsers">Manage Users</Link>
+      </li>
+    </>
+  );
+
+  // seller routes links
+  const sellerRoutes = (
+    <>
+      <li>
+        <Link to="/dashboard/sellerDashboard">Dashboard</Link>
+      </li>
+      <li>
+        <Link to="/dashboard/sellerCategories">Manage Categories(Seller)</Link>
+      </li>
+      <li>
+        <Link to="/dashboard/sellerProducts">Manage Products</Link>
+      </li>
+      <li>
+        <Link to="/dashboard/sellerOrders">Manage Orders</Link>
       </li>
     </>
   );
@@ -451,7 +481,7 @@ const Header = () => {
                           Connect Us
                         </HashLink> */}
                         <HashLink
-                          to="/#sell"
+                          to="/contact"
                           smooth
                           scroll={(el) => scrollWithOffset(el)}
                         >
@@ -523,33 +553,36 @@ const Header = () => {
                                 </div>
 
                                 <div className="py-2 border-b border-gray-300">
-                                  {isAdmin && !isUserLoading ? (
-                                    adminRoutes
-                                  ) : (
-                                    <>
-                                      <li>
-                                        <Link to="/dashboard/myDashboard">
-                                          Dashboard
-                                        </Link>
-                                      </li>
-                                      <li>
-                                        <Link to="/dashboard/myOrders">
-                                          My Orders
-                                        </Link>
-                                      </li>
-                                      <li>
-                                        <Link to="/dashboard/myAddress">
-                                          Address Book
-                                        </Link>
-                                      </li>
-                                      <li>
-                                        <Link to="/dashboard/addReview">
-                                          Add Review
-                                        </Link>
-                                      </li>
-                                    </>
-                                  )}
-                                </div>
+                                {isAdmin && !isUserLoading ? (
+                                  adminRoutes
+                                ) : (isSeller && !isUserLoading ? 
+                                  sellerRoutes
+                                 : 
+                                  <>
+                                    <li>
+                                      <Link to="/dashboard/myDashboard">
+                                        Dashboard
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link to="/dashboard/myOrders">
+                                        My Orders
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link to="/dashboard/myAddress">
+                                        Address Book
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link to="/dashboard/addReview">
+                                        Add Review
+                                      </Link>
+                                    </li>
+                                  </>
+                                )}
+                              </div>
+
 
                                 <li>
                                   <button onClick={handleSignOut}>
@@ -627,7 +660,7 @@ const Header = () => {
                           Connect Us
                         </HashLink> */}
 
-                        <HashLink to="/#reviews" smooth>
+                        <HashLink to="/contact" smooth>
                           Become a supplier
                         </HashLink>
 
@@ -694,32 +727,34 @@ const Header = () => {
                                   </div>
 
                                   <div className="py-2 border-b border-gray-300">
-                                    {isAdmin && !isUserLoading ? (
-                                      adminRoutes
-                                    ) : (
-                                      <>
-                                        <li>
-                                          <Link to="/dashboard/myDashboard">
-                                            Dashboard
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link to="/dashboard/myOrders">
-                                            My Orders
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link to="/dashboard/myAddress">
-                                            Address Book
-                                          </Link>
-                                        </li>
-                                        <li>
-                                          <Link to="/dashboard/addReview">
-                                            Add Review
-                                          </Link>
-                                        </li>
-                                      </>
-                                    )}
+                                  {isAdmin && !isUserLoading ? (
+                                  adminRoutes
+                                ) : (isSeller && !isUserLoading ? 
+                                  sellerRoutes
+                                 : 
+                                  <>
+                                    <li>
+                                      <Link to="/dashboard/myDashboard">
+                                        Dashboard
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link to="/dashboard/myOrders">
+                                        My Orders
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link to="/dashboard/myAddress">
+                                        Address Book
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link to="/dashboard/addReview">
+                                        Add Review
+                                      </Link>
+                                    </li>
+                                  </>
+                                )}
                                   </div>
 
                                   <li>
