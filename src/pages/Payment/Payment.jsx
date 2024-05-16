@@ -5,8 +5,7 @@ import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import useCart from "../../hooks/useCart";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
-console.log(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
+const stripePromise = loadStripe(`${process.env.REACT_APP_MESSAGINGSENDERID}`);
 
 const Payment = () => {
   const [clientSecret, setClientSecret] = useState("");

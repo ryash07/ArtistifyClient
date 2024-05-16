@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import CustomHelmet from "../components/CustomHelmet/CustomHelmet";
 import useUserInfo from "../hooks/useUserInfo";
 import AdminNavigation from "../pages/Dashboard/AdminNavigation/AdminNavigation";
+import SellerNavigation from "../pages/SellerDashBoard/SellerNavigation/SellerNavigation";
 import useAuthContext from "../hooks/useAuthContext";
 // import AnimateText from "@moxy/react-animate-text";
 
@@ -23,11 +24,19 @@ const DashboardLayout = () => {
           <>
             {(!isUserLoading && userFromDB?.admin) || (!isUserLoading && userFromDB?.seller) ? (
               <div>
+                {
+                userFromDB?.seller ?
+                  <SellerNavigation
+                  sidebarCollapsed={sidebarCollapsed}
+                  setSidebarCollapsed={setSidebarCollapsed}
+                  />
+                 :
                 <AdminNavigation
                   sidebarCollapsed={sidebarCollapsed}
                   setSidebarCollapsed={setSidebarCollapsed}
                 />
-                <div className="mt-20 mb-24">
+                }
+                <div className={`${userFromDB?.seller ? 'mt-5' : 'mt-20'} mb-24`}>
                   <div
                     className={`w-[100vw-100px] ml-[60px] ${
                       !sidebarCollapsed

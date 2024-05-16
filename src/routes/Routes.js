@@ -30,7 +30,6 @@ import AdminOrders from "../pages/Dashboard/AdminOrders/AdminOrders";
 import SellerLogin from "../pages/SellerLogin/Login";
 import SellerDashboard from "../pages/SellerDashBoard/SellerDashboard/SellerDashboard";
 
-
 const router = createBrowserRouter([
   {
     path: "/",

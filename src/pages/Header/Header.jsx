@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import logo from "./logo.png";
+import logo from "./logo2.png";
 import {
   FiPhone,
   FiSearch,
@@ -391,7 +391,7 @@ const Header = () => {
           </div>
 
           {/* Navigation Bar */}
-          <nav>
+         {<nav>
             <div className="drawer">
               <input
                 id="my-drawer-3"
@@ -883,7 +883,7 @@ const Header = () => {
                 </ul>
               </div>
             </div>
-          </nav>
+          </nav>}
           {/* Navigation Bar End */}
 
           {/* right side drawer for cart */}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import logo from "/logo.png";
-import "./AdminNavigation.css";
+import "./SellerNavigation.css";
 import {
   FaAngleRight,
   FaArrowLeft,
@@ -16,7 +16,7 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-const AdminNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
+const SellerNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
   const { user, logOut } = useAuthContext();
   const [userFromDB] = useUserInfo();
   const [productSubmenuCollapsed, setProductSubmenuCollapsed] = useState(true);
@@ -188,7 +188,7 @@ const AdminNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
               </NavLink>
             </li>
             {/* ------------ USERS ------------ */}
-            <li className="text-white">
+            {/* <li className="text-white">
               <NavLink
                 to="/dashboard/adminUsers"
                 className={({ isActive, isPending }) =>
@@ -200,7 +200,7 @@ const AdminNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
                 </div>
                 <p className={`whitespace-nowrap pt-1 pl-1`}>Users</p>
               </NavLink>
-            </li>
+            </li> */}
             {/* ------------------------ */}
           </ul>
 
@@ -231,4 +231,4 @@ const AdminNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
   );
 };
 
-export default AdminNavigation;
+export default SellerNavigation;

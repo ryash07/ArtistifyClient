@@ -61,15 +61,15 @@ const OrderSuccess = () => {
     setInvoiceLoading(true);
     let invoiceData = {
       images: {
-        logo: "https://i.ibb.co/BG5NMsk/output.png",
+        logo: "https://i.postimg.cc/mkLckYs2/Aritistify.png",
       },
       // Your own data
       sender: {
-        company: "UB Jewellers",
-        address: "Narayanganj City Corporation",
-        zip: "1400",
-        city: "Dhaka",
-        country: "Bangladesh",
+        company: "Artistify",
+        address: "City Palace Road",
+        zip: "313002",
+        city: "Udaipur",
+        country: "India",
       },
       // Your recipient
       client: {
@@ -100,7 +100,7 @@ const OrderSuccess = () => {
         price: product?.price,
         "tax-rate": 0,
       })),
-      "bottom-notice": "Thanks for shopping with UB Jewellers ❣️",
+      "bottom-notice": "Thanks for shopping with Artistify ❣️",
       settings: {
         currency: "USD",
       },
