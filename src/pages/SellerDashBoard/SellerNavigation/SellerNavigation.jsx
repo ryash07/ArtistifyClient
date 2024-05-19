@@ -105,7 +105,7 @@ const SellerNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? `active` : ""
                 }
-                to="/dashboard/adminDashboard"
+                to="/dashboard/sellerDashboard"
               >
                 <div className="px-4">
                   <FaHouse className="text-xl block" />
@@ -114,9 +114,9 @@ const SellerNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
               </NavLink>
             </li>
             {/* ------------ CATEGORIES ------------ */}
-            <li className="text-white">
+            {/* <li className="text-white">
               <NavLink
-                to="/dashboard/adminCategories"
+                to="/dashboard/sellerCategories"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? `active` : ""
                 }
@@ -126,7 +126,7 @@ const SellerNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
                 </div>
                 <p className={`whitespace-nowrap pt-1 pl-1`}>Categories</p>
               </NavLink>
-            </li>
+            </li> */}
             {/* ------------ PRODUCTS ------------ */}
             <li className="text-white">
               <button
@@ -156,7 +156,7 @@ const SellerNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
                 } flex-col w-full space-y-3`}
               >
                 <NavLink
-                  to="/dashboard/adminProducts"
+                  to="/dashboard/sellerProducts"
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? `active` : ""
                   }
@@ -164,7 +164,7 @@ const SellerNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
                   Manage Products
                 </NavLink>
                 <NavLink
-                  to="/dashboard/adminAddProducts"
+                  to="/dashboard/sellerAddProducts"
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? `active` : ""
                   }
@@ -176,7 +176,7 @@ const SellerNavigation = ({ sidebarCollapsed, setSidebarCollapsed }) => {
             {/* ------------ ORDERS ------------ */}
             <li className="text-white">
               <NavLink
-                to="/dashboard/adminOrders"
+                to="/dashboard/sellerOrders"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? `active` : ""
                 }

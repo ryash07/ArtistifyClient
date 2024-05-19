@@ -188,9 +188,9 @@ const Header = () => {
       <li>
         <Link to="/dashboard/sellerDashboard">Dashboard</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/dashboard/sellerCategories">Manage Categories(Seller)</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/dashboard/sellerProducts">Manage Products</Link>
       </li>
@@ -358,7 +358,7 @@ const Header = () => {
                                   <div className="flex-grow">
                                     <h4>{product.name}</h4>
                                     <p className="mt-1">
-                                      $ {product.discountPrice || product.price}
+                                      ₹ {product.discountPrice || product.price}
                                     </p>
                                   </div>
                                 </div>

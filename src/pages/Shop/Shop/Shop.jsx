@@ -28,7 +28,7 @@ const Shop = () => {
   const [maximumPrice, setMaximumPrice] = useState(0);
   const [priceSortingOrder, setPriceSortingOrder] = useState("all");
   const [size, setSize] = useState("all");
-  const [carate, setCarate] = useState("all");
+  // const [carate, setCarate] = useState("all");
   const [searchText, setSearchText] = useState("");
   const [showFilters, setShowFilters] = useState(false);
 
@@ -63,7 +63,7 @@ const Shop = () => {
 
     axios
       .get(
-        `http://localhost:5000/productsfilter?category=${category}&minPrice=${minimumPrice}&maxPrice=${maximumPrice}&priceOrder=${priceSortingOrder}&size=${size}&carate=${carate}&search=${searchText}`
+        `http://localhost:5000/products/filter?category=${category}&minPrice=${minimumPrice}&maxPrice=${maximumPrice}&priceOrder=${priceSortingOrder}&size=${size}&search=${searchText}`
       )
       .then((res) => {
         setFilteredProducts(res.data);
@@ -80,7 +80,7 @@ const Shop = () => {
     maximumPrice,
     priceSortingOrder,
     size,
-    carate,
+    // carate,
     searchText,
     location,
   ]);
@@ -89,20 +89,20 @@ const Shop = () => {
   useEffect(() => {
     if (
       category.toLowerCase() !== "all" ||
-      carate.toLowerCase() !== "all" ||
+      // carate.toLowerCase() !== "all" ||
       size.toLowerCase() !== "all"
     ) {
       setShowFilters(true);
     } else {
       setShowFilters(false);
     }
-  }, [category, carate, size]);
+  }, [category, /* carate, */ size]);
 
   // left side filter options
   const { getUniqueProducts } = useFilterProducts();
   const filterCategories = getUniqueProducts("category");
   const filterSizes = getUniqueProducts("size");
-  const filterCarates = getUniqueProducts("carate");
+  // const filterCarates = getUniqueProducts("carate");
   const [allFilteredCategories, setAllFilteredCategories] = useState([]);
 
   // display categories on left side with 0 product as well
@@ -111,7 +111,7 @@ const Shop = () => {
   useEffect(() => {
     // fetch all categories
     axios
-      .get("https://localhost:5000/categories")
+      .get("http://localhost:5000/categories")
       .then((res) => {
         setAllCategories(res.data);
       })
@@ -230,8 +230,8 @@ const Shop = () => {
                     }}
                   />
                   <div className="flex justify-between items-center px-1 ">
-                    <p className="text-sm">Min: {minimumPrice}$</p>
-                    <p className="text-sm">Max: {maximumPrice}$</p>
+                    <p className="text-sm">Min: {minimumPrice}₹</p>
+                    <p className="text-sm">Max: {maximumPrice}₹</p>
                   </div>
                 </div>
 
@@ -255,7 +255,7 @@ const Shop = () => {
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <h3>Carate</h3>
                   <div className="space-y-2 mt-5">
                     {filterCarates?.map((carate) => (
@@ -275,7 +275,7 @@ const Shop = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </ul>
           </div>
@@ -314,8 +314,8 @@ const Shop = () => {
               }}
             />
             <div className="flex justify-between items-center px-1 ">
-              <p className="text-sm">Min: {minimumPrice}$</p>
-              <p className="text-sm">Max: {maximumPrice}$</p>
+              <p className="text-sm">Min: {minimumPrice}₹</p>
+              <p className="text-sm">Max: {maximumPrice}₹</p>
             </div>
           </div>
 
@@ -399,7 +399,7 @@ const Shop = () => {
                 className="text-error flex items-baseline gap-2 hover:text-gray-400"
                 onClick={() => {
                   setCategory("all");
-                  setCarate("all");
+                  // setCarate("all");
                   setSize("all");
                 }}
               >
@@ -424,14 +424,14 @@ const Shop = () => {
                 </button>
               )}
 
-              {carate.toLowerCase() !== "all" && (
+              {/* {carate.toLowerCase() !== "all" && (
                 <button
                   className="flex items-baseline gap-2 hover:text-gray-400"
                   onClick={() => setCarate("all")}
                 >
                   <TfiClose className="text-sm" /> {carate}K
                 </button>
-              )}
+              )} */}
             </div>
           )}
 

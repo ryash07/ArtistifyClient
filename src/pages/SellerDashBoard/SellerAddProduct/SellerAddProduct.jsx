@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./AdminAddProduct.css";
+import "./SellerAddProduct.css";
 import { useForm, Controller } from "react-hook-form";
 import { Link, useLocation } from "react-router-dom";
 import uploadIcon from "../../../assets/image-upload.png";
@@ -10,7 +10,7 @@ import Swal from "sweetalert2";
 import useProducts from "../../../hooks/useProducts";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
-const AdminAddProduct = () => {
+const SellerAddProduct = () => {
   const { user } = useAuthContext();
   const [axiosSecure] = useAxiosSecure();
   const [productError, setProductError] = useState(null);
@@ -151,7 +151,7 @@ const AdminAddProduct = () => {
                 product.img = res.data.display_url;
 
                 axiosSecure
-                  .post("/products", product)
+                  .post("/products/seller", product)
                   .then((res) => {
                     if (res.data.insertedId) {
                       Swal.fire({
@@ -196,7 +196,7 @@ const AdminAddProduct = () => {
                 if (res.data.success) {
                   product.img = res.data.data.display_url;
                   axiosSecure
-                    .put(`/products/${dynamicProduct?._id}`, product)
+                    .put(`/products/seller/${dynamicProduct?._id}`, product)
                     .then((res) => {
                       if (res.data.modifiedCount > 0) {
                         Swal.fire({
@@ -213,7 +213,7 @@ const AdminAddProduct = () => {
           } else {
             product.img = dynamicProduct.img;
             axiosSecure
-              .put(`/products/${dynamicProduct?._id}`, product)
+              .put(`/products/seller/${dynamicProduct?._id}`, product)
               .then((res) => {
                 if (res.data.modifiedCount > 0) {
                   Swal.fire({
@@ -588,4 +588,4 @@ const AdminAddProduct = () => {
   );
 };
 
-export default AdminAddProduct;
+export default SellerAddProduct;

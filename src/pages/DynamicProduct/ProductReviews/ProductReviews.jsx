@@ -33,7 +33,7 @@ const ProductReviews = () => {
   useEffect(() => {
     axios
       .get(
-        `https://ub-jewellers-server-production.up.railway.app/single-product/${id}`
+        `http://localhost:5000/single-product/${id}`
       )
       .then((res) => setDynamicProduct(res.data))
       .catch((error) => console.error(error));
@@ -42,6 +42,7 @@ const ProductReviews = () => {
   // check if user already reviewed or not
   useEffect(() => {
     if (user) {
+      console.log(dynamicProduct)
       const reviewFound = dynamicProduct?.review?.find((r) => {
         if (r.email) {
           return r.reviewerEmail === user?.email;

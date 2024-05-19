@@ -36,7 +36,7 @@ const DashboardLayout = () => {
                   setSidebarCollapsed={setSidebarCollapsed}
                 />
                 }
-                <div className={`${userFromDB?.seller ? 'mt-5' : 'mt-20'} mb-24`}>
+                <div className={`mt-20 mb-24`}>
                   <div
                     className={`w-[100vw-100px] ml-[60px] ${
                       !sidebarCollapsed

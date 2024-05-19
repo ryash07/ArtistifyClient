@@ -241,7 +241,7 @@ const Checkout = () => {
                       {item.name}{" "}
                       <span className="font-bold">x {item.quantity}</span>
                     </h4>
-                    <p className="font-bold">${item.price}</p>
+                    <p className="font-bold">₹{item.price}</p>
                   </div>
                 </div>
               ))}
@@ -250,7 +250,7 @@ const Checkout = () => {
           <div className="divider"></div>
           <div className="flex justify-between items-center font-bold text-lg">
             <h5>Total</h5>
-            <h5>${cartSubtotal?.subtotal}</h5>
+            <h5>₹{cartSubtotal?.subtotal}</h5>
           </div>
           <div className="divider"></div>
           <div>

@@ -9,7 +9,15 @@ import { FaInstagram } from "react-icons/fa6";
 // import AnimateText from "@moxy/react-animate-text";
 
 const Instagram = () => {
-  const instaImgs = [insta1, insta2, insta3, insta4, insta5];
+  const instaImgs = [insta1, insta4, insta3, insta2, insta5];
+  const instaLinks = [
+    "https://www.instagram.com/aditijain_._/",
+    "https://www.instagram.com/_sonia.jat_/",
+    "https://www.instagram.com/ryash07/",
+    "https://www.instagram.com/_strvlightt._",
+    "https://www.instagram.com/k_khushisalvi3?igsh=ZnhnZXVhZ2s0cnZ2",
+  ];
+
   return (
     <section id="connect" className="container pt-14 mb-24 px-4 mx:px-0">
       <div className="flex items-center md:items-end justify-between">
@@ -34,18 +42,22 @@ const Instagram = () => {
       </div>
 
       <div className="md:grid md:grid-cols-5 gap-x-5 mt-8 overflow-x-auto whitespace-nowrap">
-        {instaImgs.map((img, counter) => (
-          <div
+        {instaImgs.map((img, index) => (
+          <a
             key={img}
+            href={instaLinks[index]}
+            target="_blank"
+            rel="noreferrer"
             className="relative insta-img-con overflow-hidden rounded-xl inline-block h-[300px] w-[60%] md:h-auto md:w-auto md:block mr-6 md:mr-0"
             data-aos="fade-left"
-            data-aos-delay={`${counter * 150}`}
+            data-aos-delay={`${index * 150}`}
+            style={{height:'350px'}}
           >
             <img src={img} alt="" className="w-full h-full rounded-xl" />
             <div className="insta-img-overlay w-full h-full bg-[#00000066] absolute top-0 left-0 right-0 rounded-xl flex justify-center items-center cursor-pointer opacity-0 hover:opacity-100 transition-all duration-500 ease-in-out">
               <FaInstagram className="text-4xl text-white font-bold" />
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

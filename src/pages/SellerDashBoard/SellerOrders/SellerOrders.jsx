@@ -9,9 +9,10 @@ import LineChartComponent from "../../../components/LineChartComponent/LineChart
 import useAdminStats from "../../../hooks/useAdminStats";
 import useAuthContext from "../../../hooks/useAuthContext";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useSellerStats from "../../../hooks/useSellerStats";
 // import AnimateText from "@moxy/react-animate-text";
 
-const AdminOrders = () => {
+const SellerOrders = () => {
   const location = useLocation();
   const [userFromDB] = useUserInfo();
   const [axiosSecure] = useAxiosSecure();
@@ -22,7 +23,7 @@ const AdminOrders = () => {
     refetch,
   } = useQuery({
     enabled:
-      !isAuthLoading && user?.uid !== undefined && userFromDB?.admin === true,
+      !isAuthLoading && user?.uid !== undefined && userFromDB?.seller === true,
     queryKey: ["all-orders"],
     queryFn: async () => {
       const result = await axiosSecure.get("/admin/orders");
@@ -31,7 +32,7 @@ const AdminOrders = () => {
   });
 
   // Order chart data
-  const { incomeStats } = useAdminStats();
+  const { incomeStats } = useSellerStats();
 
   // update order status
   const handleStatusChange = (selectedOption) => {
@@ -170,7 +171,7 @@ const AdminOrders = () => {
                       />
                     </td>
                     <td>{order.orderDetails.length}</td>
-                    <td>₹{order.total}</td>
+                    <td>${order.total}</td>
                     <td>
                       <Link
                         to={"/order-success"}
@@ -209,4 +210,4 @@ const AdminOrders = () => {
   );
 };
 
-export default AdminOrders;
+export default SellerOrders;

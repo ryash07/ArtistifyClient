@@ -4,12 +4,14 @@ import Header from "../pages/Header/Header";
 import Footer from "../pages/Footer/Footer";
 import { Toaster } from "react-hot-toast";
 import TakeToLoginModal from "../components/TakeToLoginModal/TakeToLoginModal";
+import useUserInfo from "../hooks/useUserInfo";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 
 const MainLayout = () => {
   // scroll to top on route change
   const location = useLocation();
+  const [userFromDB] = useUserInfo();
 
   useEffect(() => {
     if (
@@ -33,9 +35,9 @@ const MainLayout = () => {
 
   return (
     <div className="max-w-screen-2xl mx-auto">
-      <Header />
+      {location?.pathname?.includes("dashboard") && userFromDB?.seller ? '' : <Header />}   
       <Outlet />
-      <Footer />
+      {location?.pathname?.includes("dashboard") && userFromDB?.seller ? '' : <Footer />}
       <Toaster 
         position="top-center"
         toastOptions={{

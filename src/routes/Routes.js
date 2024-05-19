@@ -29,6 +29,9 @@ import AdminCategories from "../pages/AdminCategories/AdminCategories";
 import AdminOrders from "../pages/Dashboard/AdminOrders/AdminOrders";
 import SellerLogin from "../pages/SellerLogin/Login";
 import SellerDashboard from "../pages/SellerDashBoard/SellerDashboard/SellerDashboard";
+import SellerProducts from "../pages/SellerDashBoard/SellerProducts/SellerProducts";
+import SellerAddProduct from "../pages/SellerDashBoard/SellerAddProduct/SellerAddProduct";
+import SellerOrders from "../pages/SellerDashBoard/SellerOrders/SellerOrders";
 
 const router = createBrowserRouter([
   {
@@ -132,7 +135,6 @@ const router = createBrowserRouter([
               </AdminRoute>
             ),
           },
-
           {
             path: "adminAddProducts",
             element: (
@@ -165,28 +167,36 @@ const router = createBrowserRouter([
               </SellerRoute>
             ),
           },
-          {
-            path: "sellerCategories",
-            element: (
-              <SellerRoute>
-                <AdminCategories />
-              </SellerRoute>
-            ),
-          },
+          // {
+          //   path: "sellerCategories",
+          //   element: (
+          //     <SellerRoute>
+          //       <AdminCategories />
+          //     </SellerRoute>
+          //   ),
+          // },
           {
             path: "sellerProducts",
             element: (
               <SellerRoute>
-                <AdminProducts />
+                <SellerProducts />
+              </SellerRoute>
+            ),
+          },
+          {
+            path: "sellerAddProducts",
+            element: (
+              <SellerRoute>
+                <SellerAddProduct />
               </SellerRoute>
             ),
           },
           {
             path: "sellerOrders",
             element: (
-              <AdminRoute>
-                <AdminOrders />
-              </AdminRoute>
+              <SellerRoute>
+                <SellerOrders />
+              </SellerRoute>
             ),
           },
         ],

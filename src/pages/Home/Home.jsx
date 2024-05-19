@@ -12,6 +12,7 @@ import Instagram from "./Instagram/Instagram";
 import OtherFeatures from "./OtherFeatures/OtherFeatures";
 import { useLocation } from "react-router-dom";
 import Pace from "pace-js";
+import Chatbot from "./ChatBot/ChatBot";
 
 const Home = () => {
   const location = useLocation();
@@ -23,7 +24,7 @@ const Home = () => {
 
   return (
     <div id="home">
-
+      <Chatbot/>
       <CustomHelmet title={"Home"} />
       <Hero />
       <MarqueeSection />

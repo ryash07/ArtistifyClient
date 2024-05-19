@@ -18,8 +18,9 @@ const FlashSale = () => {
   }, [products]);
   const isMobile = useMediaQuery({ maxWidth: 480 });
 
-  // countdown timer values
-  const targetDate = new Date(2024, 10, 10, 12, 0, 0, 0);
+  const targetDate = new Date();
+  // const targetEndDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 10);
 
   // slick slider settings
   const sliderRef = useRef(null);

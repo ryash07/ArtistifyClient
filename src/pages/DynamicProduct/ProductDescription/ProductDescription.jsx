@@ -36,10 +36,10 @@ const ProductDescription = () => {
             <p className="text-lg text-gray-600 text-justify">
               <span className="font-bold">Size:</span> {dynamicProduct?.size}
             </p>
-            <p className="text-lg text-gray-600 text-justify">
+            {/* <p className="text-lg text-gray-600 text-justify">
               <span className="font-bold">Carate:</span>{" "}
               {dynamicProduct?.carate}K
-            </p>
+            </p> */}
           </div>
         </div>
 

@@ -1,0 +1,50 @@
+.chat-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:#2E475D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    z-index: 2002;
+  }
+  
+  .chat-button:hover {
+    background-color: #384e61;
+  }
+
+  df-messenger {
+    --df-messenger-bot-message: #e0e0e0;
+    --df-messenger-user-message: #EAF0F6;
+    --df-messenger-font-color: #000;
+    --df-messenger-chat-background-color: #f6f8f9;
+    --df-messenger-button-titlebar-color: #2E475D;
+    --df-messenger-button-titlebar-font-color: #fff;
+    --df-messenger-input-placeholder-font-color: #666;
+    --df-messenger-input-font-color: #000;
+    --df-messenger-height: 50px; /* Adjust height */
+    --df-messenger-width: 50px; /* Adjust width */
+  }
+
+  df-messenger {
+    position: fixed;
+    bottom: 80px; /* Adjust position */
+    right: 20px; /* Adjust position */
+    max-height: var(--df-messenger-height);
+    max-width: var(--df-messenger-width);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
+
+  .chat-wrapper[opened="true"] {
+    height: 15.625rem !important;
+  }

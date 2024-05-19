@@ -11,8 +11,8 @@ import {
 } from "react-icons/pi";
 import RadarChartComponent from "../../../components/RadarChartComponent/RadarChartComponent";
 import BarChartComponent from "../../../components/BarChartComponent/BarChartComponent";
-import StarRatings from "react-star-ratings";
-import useAdminStats from "../../../hooks/useAdminStats";
+// import StarRatings from "react-star-ratings";
+import useSellerStats from "../../../hooks/useSellerStats";
 // import AnimateText from "@moxy/react-animate-text";
 
 const SellerDashboard = () => {
@@ -22,13 +22,13 @@ const SellerDashboard = () => {
     totalCategories,
     incomeStats,
     popularProducts,
-    recentReviews,
-  } = useAdminStats();
+    // recentReviews,
+  } = useSellerStats();
 
-  const [showFullReview, setShowFullReview] = useState({
-    state: false,
-    id: null,
-  });
+  // const [showFullReview, setShowFullReview] = useState({
+  //   state: false,
+  //   id: null,
+  // });
 
   return (
     <div className="px-4 md:px-0">
@@ -49,7 +49,7 @@ const SellerDashboard = () => {
         <div className="flex justify-between items-start border p-4 rounded-lg w-full md:w-1/4 shadow">
           <div>
             <h4 className="text-2xl font-bold mb-1">
-              $
+              ₹
               {parseFloat(
                 adminStats?.currentMonthStatsData?.totalSells
               ).toFixed(2)}
@@ -170,7 +170,7 @@ const SellerDashboard = () => {
         <div className="flex justify-between items-start border p-4 rounded-lg w-full md:w-1/4 shadow">
           <div>
             <h4 className="text-2xl font-bold mb-1">
-              $
+            ₹
               {parseFloat(
                 adminStats?.currentMonthStatsData?.averageOrderValue
               ).toFixed(2)}
@@ -230,7 +230,7 @@ const SellerDashboard = () => {
         </div>
 
         {/* --------------------------------------------- */}
-        <div className="flex justify-between items-start border p-4 rounded-lg w-full md:w-1/4 shadow">
+        {/* <div className="flex justify-between items-start border p-4 rounded-lg w-full md:w-1/4 shadow">
           <div>
             <h4 className="text-2xl font-bold mb-1">
               {adminStats?.customerStatsData?.newCustomers}
@@ -285,7 +285,7 @@ const SellerDashboard = () => {
               <PiUsersThreeBold className="text-2xl" />
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <section className="mt-16 flex flex-col md:flex-row items-center gap-6">
@@ -309,7 +309,7 @@ const SellerDashboard = () => {
       </section>
 
       <section className="flex flex-col md:flex-row md:items-stretch justify-between gap-8 mt-16">
-        <div className="border rounded-lg md:w-[55%] shadow">
+        <div className="border rounded-lg md:w-[100%] shadow">
           <h4 className="font-semibold text-gray-600 border-b-2 p-4">
             Popular Products
           </h4>
@@ -346,7 +346,7 @@ const SellerDashboard = () => {
                       </div>
                     </td>
                     <td>{product.category}</td>
-                    <td>${product.discountPrice || product.price}</td>
+                    <td>₹{product.discountPrice || product.price}</td>
                     <td className="font-bold">{product.sold}</td>
                   </tr>
                 ))}
@@ -355,7 +355,7 @@ const SellerDashboard = () => {
           </div>
         </div>
 
-        <div className="border rounded-lg md:w-[45%] shadow">
+        {/* <div className="border rounded-lg md:w-[45%] shadow">
           <h4 className="font-semibold text-gray-600 border-b-2 p-4">
             Recent Reviews
           </h4>
@@ -423,7 +423,7 @@ const SellerDashboard = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );
