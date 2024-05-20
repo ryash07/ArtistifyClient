@@ -10,7 +10,7 @@ const useSellerProducts = () => {
     queryKey: ["products"],
     queryFn: async () => {
       const res = await axios.get(
-        "http://localhost:5000/products/seller"
+        "https://artistify-server.vercel.app/products/seller"
       );
       return res.data;
     },

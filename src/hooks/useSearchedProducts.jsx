@@ -9,7 +9,7 @@ const useSearchedProducts = (searchText) => {
     setIsSearchLoading(true);
     axios
       .get(
-        `http://localhost:5000/products?searchText=${searchText}`
+        `https://artistify-server.vercel.app/products?searchText=${searchText}`
       )
       .then((res) => {
         setSearchedProducts(res.data);

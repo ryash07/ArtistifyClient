@@ -112,7 +112,7 @@ const Register = () => {
       // upload image to cloudinary
       axios
         .post(
-          "http://localhost:5000/cloudinary-upload",
+          "https://artistify-server.vercel.app/cloudinary-upload",
           {
             name: data?.name,
             img: base64Image,
@@ -140,7 +140,7 @@ const Register = () => {
                   .then(() => {
                     // add user to users collection in db
                     axios.post(
-                      "http://localhost:5000/users",
+                      "https://artistify-server.vercel.app/users",
                       {
                         name: result?.user?.displayName,
                         email: result?.user?.email,
@@ -181,7 +181,7 @@ const Register = () => {
       .then((res) => {
         // add user to users collection in db
         axios.post(
-          "http://localhost:5000/users",
+          "https://artistify-server.vercel.app/users",
           {
             name: res?.user?.displayName,
             email: res?.user?.email,

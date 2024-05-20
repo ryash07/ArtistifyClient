@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser?.uid !== undefined) {
         setUser(currentUser);
         axios
-          .post("http://localhost:5000/jwt", {
+          .post("https://artistify-server.vercel.app/jwt", {
             email: currentUser.email,
           })
           .then((res) => {

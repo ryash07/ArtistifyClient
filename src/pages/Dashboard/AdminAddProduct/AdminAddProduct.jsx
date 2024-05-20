@@ -36,7 +36,7 @@ const AdminAddProduct = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get("http://localhost:5000/categories")
+        .get("https://artistify-server.vercel.app/categories")
         .then((res) => setCategories(res.data))
         .catch((e) => console.error(e));
     }

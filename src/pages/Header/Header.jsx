@@ -55,7 +55,7 @@ const Header = () => {
     // fetching notifications
     axios
       .get(
-        "http://localhost:5000/nav-notifications"
+        "https://artistify-server.vercel.app/nav-notifications"
       )
       .then((res) => setNavNotifications(res.data))
       .catch((error) => console.error(error));

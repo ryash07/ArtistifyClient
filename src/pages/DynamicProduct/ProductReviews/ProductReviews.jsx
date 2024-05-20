@@ -33,7 +33,7 @@ const ProductReviews = () => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:5000/single-product/${id}`
+        `https://artistify-server.vercel.app/single-product/${id}`
       )
       .then((res) => setDynamicProduct(res.data))
       .catch((error) => console.error(error));

@@ -16,7 +16,7 @@ const OtherFeatures = () => {
         <div>
           <h4 className="text-xl font-bold mb-2 text-black">Free Shipping</h4>
           <p className="text-gray-900">
-            Free Shipping worldwide for orders over $1130
+            Free Shipping worldwide for orders over ₹1130
           </p>
         </div>
       </div>

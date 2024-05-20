@@ -63,7 +63,7 @@ const Shop = () => {
 
     axios
       .get(
-        `http://localhost:5000/products/filter?category=${category}&minPrice=${minimumPrice}&maxPrice=${maximumPrice}&priceOrder=${priceSortingOrder}&size=${size}&search=${searchText}`
+        `https://artistify-server.vercel.app/products/filter?category=${category}&minPrice=${minimumPrice}&maxPrice=${maximumPrice}&priceOrder=${priceSortingOrder}&size=${size}&search=${searchText}`
       )
       .then((res) => {
         setFilteredProducts(res.data);
@@ -111,7 +111,7 @@ const Shop = () => {
   useEffect(() => {
     // fetch all categories
     axios
-      .get("http://localhost:5000/categories")
+      .get("https://artistify-server.vercel.app/categories")
       .then((res) => {
         setAllCategories(res.data);
       })

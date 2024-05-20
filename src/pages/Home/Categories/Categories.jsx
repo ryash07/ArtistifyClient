@@ -10,7 +10,7 @@ const Categories = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/categories")
+      .get("https://artistify-server.vercel.app/categories")
       .then((res) => setCategories(res.data))
       .catch((error) => console.error(error));
   }, []);

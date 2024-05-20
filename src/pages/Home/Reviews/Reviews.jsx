@@ -12,7 +12,7 @@ const Reviews = () => {
     queryKey: ["reviews"],
     queryFn: async () => {
       const res = await axios.get(
-        "http://localhost:5000/reviews"
+        "https://artistify-server.vercel.app/reviews"
       );
       return res.data;
     },
